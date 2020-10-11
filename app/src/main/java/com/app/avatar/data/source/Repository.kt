@@ -1,12 +1,9 @@
 package com.app.avatar.data.source
 
-import androidx.lifecycle.LiveData
-import com.app.avatar.data.source.local.LocalDataSource
-import com.app.avatar.data.source.remote.RemoteDataSource
+import com.app.avatar.data.source.local.Database
 
 class Repository(
-    private val localDataSource: LocalDataSource,
-    private val remoteDataSource: RemoteDataSource
+    private val database: Database
 ) {
 
 }
