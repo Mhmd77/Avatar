@@ -6,8 +6,8 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-@Entity
-data class MovieItem(
+@Entity(tableName = "table_movie")
+data class Movie(
     @Json(name = "imdbId")
     @PrimaryKey
     private val id: String,
@@ -17,6 +17,12 @@ data class MovieItem(
     private val year: String,
     @Json(name = "Type")
     private val type: String,
-    @Json(name = "Poster")
-    private val poster: String
+    @Json(name = "Rated")
+    private val rated: String,
+    @Json(name = "Released")
+    private val released: String,
+    @Json(name = "Genre")
+    private val genre: String,
+    @Json(name = "Actors")
+    private val acters: String
 )
