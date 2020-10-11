@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/movieListFragment">
 
+    <fragment
+        android:id="@+id/movieListFragment"
+        android:name="com.app.avatar.ui.list.MovieListFragment"
+        android:label="MovieListFragment" >
+        <action
+            android:id="@+id/action_movieListFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.app.avatar.ui.detail.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="imdbId"
+            app:argType="string" />
+    </fragment>
 </navigation>

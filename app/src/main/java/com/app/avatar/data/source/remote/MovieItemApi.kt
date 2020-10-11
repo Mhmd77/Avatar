@@ -1,7 +1,6 @@
 package com.app.avatar.data.source.remote
 
-import com.app.avatar.data.model.Movie
-import com.app.avatar.data.model.MovieItem
+import com.app.avatar.data.model.MovieListHolder
 import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -11,10 +10,10 @@ object MovieItemApiService {
 }
 
 interface MovieItemApi {
-    @GET
+    @GET(".")
     fun getMoviesListAsync(
         @Query("apiKey") apiKey: String = Network.API_KEY,
         @Query("s") search: String = Network.SEARCH
-    ): Deferred<List<MovieItem>>
+    ): Deferred<MovieListHolder>
 }
 

@@ -10,7 +10,7 @@ object MovieApiService {
 }
 
 interface MovieApi {
-    @GET
+    @GET(".")
     fun getMovieById(
         @Query("i") imdbId: String,
         @Query("apiKey") apiKey: String = Network.API_KEY

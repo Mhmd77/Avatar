@@ -7,7 +7,7 @@ import com.app.avatar.data.model.MovieItem
 
 @Database(
     entities = [MovieItem::class, Movie::class],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 abstract class Database : RoomDatabase() {
