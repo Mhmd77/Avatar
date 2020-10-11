@@ -11,4 +11,6 @@ import com.app.avatar.data.model.MovieItem
     exportSchema = false
 )
 abstract class Database : RoomDatabase() {
+    abstract fun movieItemDao(): MovieItemDao
+    abstract fun movieDao(): MovieDao
 }
