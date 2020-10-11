@@ -8,6 +8,10 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 
 object Network {
+    const val API_KEY = "4f588b70"
+
+    const val SEARCH = "avatar"
+
     private const val BASE_URL = "http://omdbapi.com/"
 
     private val interceptor = HttpLoggingInterceptor().apply {
